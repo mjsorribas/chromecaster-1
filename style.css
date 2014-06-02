@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+#input {
+  display: block;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  color: transparent;
+  outline: none;
+  cursor: pointer;
+  top: 50%;
+  right: 50%;
+  margin: -50px -50px 0 0;
+  z-index: 10;
+}
+
+#input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+#input::before {
+  content: 'upload mp4';
+  color: #6e7d89;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 10px solid #6e7d89;
+  border-radius: 50%;
+  outline: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-top: 33px;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+#input:hover::before {
+  background: #6e7d89;
+  color: white;
+}
+
+#input:active::before {
+  background: white;
+  color: #6e7d89;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
